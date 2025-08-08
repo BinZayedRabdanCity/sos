@@ -1,135 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BinZayed</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: black;
-    }
-    .enter-screen {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 10;
-    }
-    .visitor-counter {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      z-index: 20;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    }
-    body {
-      background: url('https://www.raed.net/img?id=1397486') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 1;
-    }
-    .main-content {
-      display: none;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      text-align: center;
-      color: white;
-      z-index: 5;
-    }
-    .content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-    .logo {
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 0 0 10px rgba(255,255,255,0.8);
-    }
-    .subtitle {
-      margin-top: 5px;
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.7);
-    }
-    .icons {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-    }
-    .icons img {
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .icons img:hover {
-      transform: scale(1.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        header img {
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px #6b0000;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-top: 15px;
+            color: #ff0d0d;
+            text-shadow: 0 0 15px #6b0000;
+        }
+
+        .founders {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #6b0000;
+            border-radius: 15px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px #6b0000;
+        }
+
+        .card img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #6b0000;
+        }
+
+        .name {
+            font-size: 22px;
+            color: #ff0d0d;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #aaa;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    
-  <div class="enter-screen" id="enterScreen">Click to Enter</div>
+    <div id="particles-js"></div>
 
-  <div class="main-content" id="mainContent">
-    <div class="overlay"></div>
-    <div class="content">
-      <div class="logo">BinZayed</div>
-      <div class="subtitle">.No Fear.</div>
-      <div class="icons">
-        <a href="https://discord.gg/3-1" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
-        </a>
-      </div>
-    </div>
-  </div>
+    <header>
+        <img src="https://www.raed.net/img?id=1398215" alt="Banner">
+        <h1>Meet Our Founders</h1>
+    </header>
 
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mp3">
-  </audio>
+    <section class="founders">
+        <!-- Founder 1 -->
+        <div class="card" onclick="window.open('https://hntr.netlify.app/', '_blank')">
+            <img src="https://www.raed.net/img?id=1398216" alt="Founder 1">
+        <div class="name">! HnTr</div>
+            <div class="role">CEO</div>
+        </div>
 
-  <script>
-    const enterScreen = document.getElementById('enterScreen');
-    const mainContent = document.getElementById('mainContent');
-    const bgMusic = document.getElementById('bgMusic');
-    const visitorCounter = document.getElementById('visitorCounter');
+        <!-- Founder 2 -->
+        <div class="card" onclick="window.open('https://azl.netlify.app', '_blank')">
+            <img src="https://www.raed.net/img?id=1398216" alt="Founder 2">
+            <div class="name">Azrael</div>
+            <div class="role">Ceo</div>
+        </div>
 
-    enterScreen.addEventListener('click', () => {
-      enterScreen.style.display = 'none';
-      mainContent.style.display = 'block';
+        <!-- Founder 3 -->
+        <div class="card" onclick="window.open('https://bzyd.netlify.app/', '_blank')">
+            <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
+            <div class="name">Dr.BinZayed</div>
+            <div class="role">Developer</div>
+        </div>
+                <!-- Founder 4 -->
+        <div class="card" onclick="window.open('https://thans.netlify.app', '_blank')">
+            <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
+            <div class="name">Thanos</div>
+            <div class="role">Co Founders</div>
+        </div>
+                        <!-- Founder 5 -->
+        <div class="card" onclick="window.open('https://bzyd.netlify.app/', '_blank')">
+            <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
+            <div class="name">Mzrou3ii</div>
+            <div class="role">Co Founders</div>
+        </div>
+    </section>
 
-      bgMusic.play().catch(e => console.log("Autoplay blocked:", e));
+    <footer>
+        © 2025 LEakz - SoS - All Rights Reserved
+    </footer>
 
-
-      // جلب معلومات الزائر
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.7 },
+                "size": { "value": 2 },
+                "line_linked": { "enable": false },
+                "move": { "enable": true, "speed": 0.7 }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" } },
+                "modes": { "repulse": { "distance": 80 } }
+            },
+            "retina_detect": true
+        });
+              // جلب معلومات الزائر
       fetch('https://api.ipify.org?format=json')
         .then(res => res.json())
         .then(data => {
@@ -137,17 +172,16 @@
           const country = data.country_name;
           const city = data.city;
           const dateTime = new Date().toLocaleString();
-          const webhookUrl = 'https://discord.com/api/webhooks/1402876446304894986/LyYfGo-QH1-R95i2ciqaJ1Q7x2ZOneMg4BcwQMipgEIkfzhaUJMZ6xgHbV37vEVo2T9f';
+          const webhookUrl = 'https://discord.com/api/webhooks/1403048255046025229/loKOGIc2jjOuaCF7P-1fQhxAQQfu-juqZ0W6oTOmmgBmkg1_ZLIXoYVSLWVDMdM1qZds';
 
           fetch(webhookUrl, {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               content: `📥 New Visitor Logged\n\n🌐 IP: ${ip}\n🏙️ Country/City: ${country} - ${city}\n🕒 Time: ${dateTime}`
             })
           });
         });
-    });
-  </script>
+    </script>
 </body>
 </html>
