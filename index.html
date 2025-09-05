@@ -46,30 +46,6 @@
       text-shadow: 0 0 15px #6b0000;
     }
 
-    nav {
-      text-align: center;
-      margin: 20px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    nav a {
-      color: #ff0d0d;
-      text-decoration: none;
-      font-size: 20px;
-      margin: 0 15px;
-      padding: 8px 18px;
-      border: 2px solid #6b0000;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background: #6b0000;
-      color: #fff;
-      box-shadow: 0 0 15px #6b0000;
-    }
-
     .founders {
       display: flex;
       justify-content: center;
@@ -88,7 +64,7 @@
       padding: 20px;
       text-align: center;
       transition: 0.3s;
-      cursor: pointer;
+      cursor: default; /* لم يعد قابل للضغط */
     }
 
     .card:hover {
@@ -198,17 +174,17 @@
   </header>
 
   <section class="founders">
-    <div class="card" onclick="window.open('https://hntr.netlify.app/', '_blank')">
+    <div class="card">
       <img src="https://www.raed.net/img?id=1398216" alt="Founder 1">
       <div class="name">! HnTr</div>
       <div class="role">CEO</div>
     </div>
-    <div class="card" onclick="window.open('https://bzyd.xyz/', '_blank')">
+    <div class="card">
       <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
       <div class="name">Dr.BinZayed</div>
       <div class="role">Developer</div>
     </div>
-    <div class="card" onclick="window.open('https://azl.netlify.app', '_blank')">
+    <div class="card">
       <img src="https://www.raed.net/img?id=1398216" alt="Founder 2">
       <div class="name">Azrael</div>
       <div class="role">Ceo</div>
@@ -266,4 +242,3 @@
   </script>
 </body>
 </html>
-
