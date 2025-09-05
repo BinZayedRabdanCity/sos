@@ -1,181 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoS</title>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoS</title>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-        body {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            background: #000;
-            overflow-x: hidden;
-        }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 0;
-            position: relative;
-            z-index: 1;
-        }
+    header {
+      text-align: center;
+      padding: 40px 0;
+      position: relative;
+      z-index: 1;
+    }
 
-        header img {
-            width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 0 30px #6b0000;
-        }
+    header img {
+      width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #6b0000;
+    }
 
-        h1 {
-            font-size: 40px;
-            margin-top: 15px;
-            color: #ff0d0d;
-            text-shadow: 0 0 15px #6b0000;
-        }
+    h1 {
+      font-size: 40px;
+      margin-top: 15px;
+      color: #ff0d0d;
+      text-shadow: 0 0 15px #6b0000;
+    }
 
-        .founders {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
-        }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+      position: relative;
+      z-index: 1;
+    }
 
-        .card {
-            background: rgba(20, 20, 20, 0.9);
-            border: 2px solid #6b0000;
-            border-radius: 15px;
-            width: 280px;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s;
-            cursor: pointer;
-        }
+    nav a {
+      color: #ff0d0d;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0 15px;
+      padding: 8px 18px;
+      border: 2px solid #6b0000;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px #6b0000;
-        }
+    nav a:hover {
+      background: #6b0000;
+      color: #fff;
+      box-shadow: 0 0 15px #6b0000;
+    }
 
-        .card img {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            border: 2px solid #6b0000;
-        }
+    .founders {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
 
-        .name {
-            font-size: 22px;
-            color: #ff0d0d;
-            margin-bottom: 10px;
-        }
+    .card {
+      background: rgba(20, 20, 20, 0.9);
+      border: 2px solid #6b0000;
+      border-radius: 15px;
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
 
-        .role {
-            font-size: 16px;
-            color: #aaa;
-            margin-bottom: 15px;
-        }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #6b0000;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            font-size: 14px;
-            color: #aaa;
-            position: relative;
-            z-index: 1;
-        }
-    </style>
+    .card img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 2px solid #6b0000;
+    }
+
+    .name {
+      font-size: 22px;
+      color: #ff0d0d;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    /* قسم الأسعار */
+    .plans {
+      text-align: center;
+      margin-top: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .plans h2 {
+      font-size: 34px;
+      color: #ff0d0d;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px #6b0000;
+    }
+
+    .plans p {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .price-list {
+      width: 60%;
+      margin: 0 auto;
+      border: 2px solid #6b0000;
+      border-radius: 12px;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.85);
+      box-shadow: 0 0 25px #6b0000;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .name-price {
+      color: #ff0d0d;
+    }
+
+    .buy-btn {
+      background: #6b0000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #ff0d0d;
+      box-shadow: 0 0 15px #6b0000;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #aaa;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-    <header>
-        <img src="https://www.raed.net/img?id=1398215" alt="Banner">
-        <h1>SoS</h1>
-    </header>
+  <header>
+    <img src="https://www.raed.net/img?id=1398215" alt="Banner">
+    <h1>SoS</h1>
+  </header>
 
-    <section class="founders">
-        <!-- Founder 1 -->
-        <div class="card" onclick="window.open('https://hntr.netlify.app/', '_blank')">
-            <img src="https://www.raed.net/img?id=1398216" alt="Founder 1">
-        <div class="name">! HnTr</div>
-            <div class="role">CEO</div>
-        </div>
-       <!-- Dev 1 -->
-        <div class="card" onclick="window.open('https://bzyd.xyz/', '_blank')">
-            <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
-            <div class="name">Dr.BinZayed</div>
-            <div class="role">Developer</div>
-        </div>
+  <!-- زر للقفز للأسعار -->
+  <nav>
+    <a href="#plans">Plans</a>
+  </nav>
 
-        <!-- Founder 2 -->
-        <div class="card" onclick="window.open('https://azl.netlify.app', '_blank')">
-            <img src="https://www.raed.net/img?id=1398216" alt="Founder 2">
-            <div class="name">Azrael</div>
-            <div class="role">Ceo</div>
-        </div>
+  <section class="founders">
+    <div class="card" onclick="window.open('https://hntr.netlify.app/', '_blank')">
+      <img src="https://www.raed.net/img?id=1398216" alt="Founder 1">
+      <div class="name">! HnTr</div>
+      <div class="role">CEO</div>
+    </div>
+    <div class="card" onclick="window.open('https://bzyd.xyz/', '_blank')">
+      <img src="https://www.raed.net/img?id=1398216" alt="Founder 3">
+      <div class="name">Dr.BinZayed</div>
+      <div class="role">Developer</div>
+    </div>
+    <div class="card" onclick="window.open('https://azl.netlify.app', '_blank')">
+      <img src="https://www.raed.net/img?id=1398216" alt="Founder 2">
+      <div class="name">Azrael</div>
+      <div class="role">Ceo</div>
+    </div>
+  </section>
 
- 
-        </div>
-    </section>
+  <!-- قسم الأسعار -->
+  <section id="plans" class="plans">
+    <h2>Plans</h2>
+    <p>Attack Plans</p>
+    <p>UpDate</p>
 
-    <footer>
-        © 2025 LEakz - SoS - All Rights Reserved
-    </footer>
+    <div class="price-list">
+      <div class="item">
+      </div>
+      <div class="item">
+        <div class="name-price">Week</div>
+        <div class="name-price">5$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+      <div class="item">
+        <div class="name-price">Month</div>
+        <div class="name-price">10$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+      <div class="item">
+        <div class="name-price">Lifetime</div>
+        <div class="name-price">50$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.7 },
-                "size": { "value": 2 },
-                "line_linked": { "enable": false },
-                "move": { "enable": true, "speed": 0.7 }
-            },
-            "interactivity": {
-                "events": { "onhover": { "enable": true, "mode": "repulse" } },
-                "modes": { "repulse": { "distance": 80 } }
-            },
-            "retina_detect": true
-        });
-              // جلب معلومات الزائر
-      fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => {
-          const ip = data.ip;
-          const country = data.country_name;
-          const city = data.city;
-          const dateTime = new Date().toLocaleString();
-          const webhookUrl = 'https://discord.com/api/webhooks/1403048255046025229/loKOGIc2jjOuaCF7P-1fQhxAQQfu-juqZ0W6oTOmmgBmkg1_ZLIXoYVSLWVDMdM1qZds';
+  <footer>
+    © 2025 LEakz - SoS - All Rights Reserved
+  </footer>
 
-          fetch(webhookUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              content: `📥 New Visitor Logged\n\n🌐 IP: ${ip}\n🏙️ Country/City: ${country} - ${city}\n🕒 Time: ${dateTime}`
-            })
-          });
-        });
-    </script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 2 },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 0.7 }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "repulse" } },
+        "modes": { "repulse": { "distance": 80 } }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
-
-
-
-
