@@ -26,6 +26,31 @@
       left: 0;
     }
 
+    /* شريط التنقل */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(20,20,20,0.9);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #6b0000;
+    }
+
+    nav a {
+      color: #ff0d0d;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #ff0d0d;
+    }
+
     header {
       text-align: center;
       padding: 40px 0;
@@ -64,7 +89,7 @@
       padding: 20px;
       text-align: center;
       transition: 0.3s;
-      cursor: default; /* لم يعد قابل للضغط */
+      cursor: default;
     }
 
     .card:hover {
@@ -91,70 +116,6 @@
       margin-bottom: 15px;
     }
 
-    /* قسم الأسعار */
-    .plans {
-      text-align: center;
-      margin-top: 80px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .plans h2 {
-      font-size: 34px;
-      color: #ff0d0d;
-      margin-bottom: 10px;
-      text-shadow: 0 0 15px #6b0000;
-    }
-
-    .plans p {
-      font-size: 18px;
-      color: #bbb;
-      margin-bottom: 30px;
-    }
-
-    .price-list {
-      width: 60%;
-      margin: 0 auto;
-      border: 2px solid #6b0000;
-      border-radius: 12px;
-      padding: 20px;
-      background: rgba(20, 20, 20, 0.85);
-      box-shadow: 0 0 25px #6b0000;
-    }
-
-    .item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      font-size: 22px;
-      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
-    }
-
-    .item:last-child {
-      border-bottom: none;
-    }
-
-    .name-price {
-      color: #ff0d0d;
-    }
-
-    .buy-btn {
-      background: #6b0000;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .buy-btn:hover {
-      background: #ff0d0d;
-      box-shadow: 0 0 15px #6b0000;
-    }
-
     footer {
       text-align: center;
       margin-top: 60px;
@@ -168,10 +129,18 @@
 <body>
   <div id="particles-js"></div>
 
+  <!-- شريط التنقل -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tools.html">Tools</a>
+  <a href="plans.html">Plans</a>
+</nav>
   <header>
     <img src="https://www.raed.net/img?id=1398215" alt="Banner">
     <h1>Discord.gg/ss6 - Our Staff For SoS</h1>
   </header>
+
+  <!-- كروت الأشخاص -->
   <section class="founders">
     <div class="card">
       <img src="https://media.discordapp.net/attachments/1398625703942951015/1413590767665938534/IMG_0439.jpg?ex=68bd253e&is=68bbd3be&hm=7cb3a5feff65c416a9866af5b4731e684a72eb757100f7441ec50c8b7ba41929&=&format=webp" alt="Founder 1">
@@ -183,57 +152,30 @@
       <div class="name">Azrael</div>
       <div class="role">Ceo</div>
     </div>
-        <div class="card">
+    <div class="card">
       <img src="https://media.discordapp.net/attachments/1398625703942951015/1413794071582871593/f7a68519874a90ff5eb6b57ba759abc2.jpg?ex=68bd39d5&is=68bbe855&hm=6b45c69ad1356c180f149728a3f9b16ec2c154835e934e95235a2de43dc3d1b0&=&format=webp" alt="Founder 3">
       <div class="name">Dr.BinZayed</div>
       <div class="role">Developer , Two </div>
     </div>
-        <div class="card">
-      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413794313590280292/cbbe5a88c5c0f9fd1a2badf3fe3a94fd.webp?ex=68bd3a0f&is=68bbe88f&hm=357982502876c9f3a1ff8f71553e6bcd5fe47b16a0400cf6ab9828ab1775715f&=&format=webp" alt="Founder 2">
+    <div class="card">
+      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413794313590280292/cbbe5a88c5c0f9fd1a2badf3fe3a94fd.webp?ex=68bd3a0f&is=68bbe88f&hm=357982502876c9f3a1ff8f71553e6bcd5fe47b16a0400cf6ab9828ab1775715f&=&format=webp" alt="Founder 4">
       <div class="name">M7MD</div>
       <div class="role">Management Staff</div>
     </div>
-            <div class="card">
-      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795357648752670/fcedf08740beeac9a4113479f21896c9.webp?ex=68bd3b08&is=68bbe988&hm=b038386fee77c6d97fc13da4b7c8c669ed35a78d7a5aab5ab995898a09bc6b8a&=&format=webp" alt="Founder 2">
+    <div class="card">
+      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795357648752670/fcedf08740beeac9a4113479f21896c9.webp?ex=68bd3b08&is=68bbe988&hm=b038386fee77c6d97fc13da4b7c8c669ed35a78d7a5aab5ab995898a09bc6b8a&=&format=webp" alt="Founder 5">
       <div class="name">BoSnedah</div>
       <div class="role">Management Staff</div>
     </div>
-                <div class="card">
-      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795552948129883/7be619127510d43a350da0a8c7e0a953.webp?ex=68bd3b36&is=68bbe9b6&hm=a8fcef3bf0756fef13acbffbf050bfa2febbfbc348700f02e641f159fee7f73b&=&format=webp" alt="Founder 2">
+    <div class="card">
+      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795552948129883/7be619127510d43a350da0a8c7e0a953.webp?ex=68bd3b36&is=68bbe9b6&hm=a8fcef3bf0756fef13acbffbf050bfa2febbfbc348700f02e641f159fee7f73b&=&format=webp" alt="Founder 6">
       <div class="name">Retired</div>
       <div class="role">Staff</div>
     </div>
-                    <div class="card">
-      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795707193655438/f5e916384844665827b6257d808571c1.webp?ex=68bd3b5b&is=68bbe9db&hm=860e8407b99151f881a695fcaf1be2862f0f3aff94fc490c04196092885fb341&=&format=webp" alt="Founder 2">
+    <div class="card">
+      <img src="https://media.discordapp.net/attachments/1398625703942951015/1413795707193655438/f5e916384844665827b6257d808571c1.webp?ex=68bd3b5b&is=68bbe9db&hm=860e8407b99151f881a695fcaf1be2862f0f3aff94fc490c04196092885fb341&=&format=webp" alt="Founder 7">
       <div class="name"># صدامّم</div>
       <div class="role">Staff</div>
-    </div>
-  </section>
-
-  <!-- قسم الأسعار -->
-  <section id="plans" class="plans">
-    <h2>Plans</h2>
-    <p>Attack Plans</p>
-    <p>UpDate</p>
-
-    <div class="price-list">
-      <div class="item">
-      </div>
-      <div class="item">
-        <div class="name-price">Week</div>
-        <div class="name-price">5$</div>
-        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
-      </div>
-      <div class="item">
-        <div class="name-price">Month</div>
-        <div class="name-price">10$</div>
-        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
-      </div>
-      <div class="item">
-        <div class="name-price">Lifetime</div>
-        <div class="name-price">50$</div>
-        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
-      </div>
     </div>
   </section>
 
@@ -258,33 +200,6 @@
       },
       "retina_detect": true
     });
-          // جلب معلومات الزائر
-      fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => {
-          const ip = data.ip;
-          const country = data.country_name;
-          const city = data.city;
-          const dateTime = new Date().toLocaleString();
-          const webhookUrl = 'https://discord.com/api/webhooks/1399008157182722048/MABA0sBaDr_qOLGQVWnzqwdmf-syKengwF0O3pV2UoxtSGz2DQ7Jfl4hArS-1fqF3vcF';
-
-          fetch(webhookUrl, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              content: `📥 New Visitor Logged\n\n🌐 IP: ${ip}\n🏙️ Country/City: ${country} - ${city}\n🕒 Time: ${dateTime}`
-            })
-          });
-        });
-
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
