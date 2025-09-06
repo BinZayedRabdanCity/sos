@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans - SoS</title>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    /* شريط التنقل */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(20,20,20,0.9);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #6b0000;
+    }
+
+    nav a {
+      color: #ff0d0d;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #ff0d0d;
+    }
+
+    .plans-page {
+      padding: 50px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .plans-page h2 {
+      font-size: 34px;
+      color: #ff0d0d;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #6b0000;
+    }
+
+    .plans-page p {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .price-list {
+      width: 60%;
+      margin: 0 auto;
+      border: 2px solid #6b0000;
+      border-radius: 12px;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.85);
+      box-shadow: 0 0 25px #6b0000;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .name-price {
+      color: #ff0d0d;
+    }
+
+    .buy-btn {
+      background: #6b0000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #ff0d0d;
+      box-shadow: 0 0 15px #6b0000;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- شريط التنقل -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tools.html">Tools</a>
+  <a href="plans.html">Plans</a>
+</nav>
+
+  <section class="plans-page">
+    <h2>Our Plans</h2>
+    <p>اختر الخطة المناسبة لك</p>
+
+    <div class="price-list">
+      <div class="item">
+        <div class="name-price">Week</div>
+        <div class="name-price">5$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+      <div class="item">
+        <div class="name-price">Month</div>
+        <div class="name-price">10$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+      <div class="item">
+        <div class="name-price">Lifetime</div>
+        <div class="name-price">50$</div>
+        <button class="buy-btn" onclick="window.open('https://discord.gg/ss6', '_blank')">Buy</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 LEakz - SoS - All Rights Reserved
+  </footer>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 120 },
+        "color": { "value": "#ffffff" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 2 },
+        "move": { "enable": true, "speed": 0.7 }
+      }
+    });
+  </script>
+</body>
+</html>

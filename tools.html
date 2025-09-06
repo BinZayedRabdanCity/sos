@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools - SoS</title>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    /* شريط التنقل */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(20,20,20,0.9);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #6b0000;
+    }
+
+    nav a {
+      color: #ff0d0d;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #ff0d0d;
+    }
+
+    .tools-page {
+      padding: 50px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tools-page h2 {
+      font-size: 34px;
+      color: #ff0d0d;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px #6b0000;
+    }
+
+    .tools-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .tool-card {
+      background: rgba(20,20,20,0.9);
+      border: 2px solid #6b0000;
+      border-radius: 15px;
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #6b0000;
+    }
+
+    /* الصور مربعة */
+.tool-card img {
+  width: 100%;           /* تاخذ عرض الكرت كامل */
+  height: 150px;         /* ارتفاع ثابت */
+  border-radius: 12px;   /* حواف ناعمة */
+  margin-bottom: 15px;
+  object-fit: cover;     /* قص متناسق */
+  border: 2px solid #6b0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+
+    .tool-card h3 {
+      color: #ff0d0d;
+      margin-bottom: 10px;
+    }
+
+    .tool-card p {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+
+    .download-btn {
+      background: #6b0000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #ff0d0d;
+      box-shadow: 0 0 15px #6b0000;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- شريط التنقل -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tools.html">Tools</a>
+  <a href="plans.html">Plans</a>
+</nav>
+
+  <section class="tools-page">
+    <h2>Tools</h2>
+    <div class="tools-container">
+
+      <!-- أداة 1 -->
+      <div class="tool-card">
+        <img src="https://media.discordapp.net/attachments/1398625703942951015/1413809336248963083/141e529b-858c-4257-96f1-cf841d8b4926.png?ex=68bd480d&is=68bbf68d&hm=9e95618e64e7868b109c0cd5deade52d64a29fb723fcad20a9599dbab3b88d5a&=&format=webp&quality=lossless" alt="Tool 1">
+        <h3>Soon</h3>
+        <p>Soon.</p>
+        <button class="download-btn" onclick="window.open('https://discord.gg/ss6','_blank')">تحميل</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 LEakz - SoS - All Rights Reserved
+  </footer>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 120 },
+        "color": { "value": "#ffffff" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 2 },
+        "move": { "enable": true, "speed": 0.7 }
+      }
+    });
+  </script>
+</body>
+</html>
