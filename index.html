@@ -26,7 +26,6 @@
       left: 0;
     }
 
-    /* شريط التنقل */
     nav {
       display: flex;
       justify-content: center;
@@ -69,6 +68,23 @@
       margin-top: 15px;
       color: #ff0d0d;
       text-shadow: 0 0 15px #6b0000;
+    }
+
+    .discord-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .discord-link img {
+      width: 60px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .discord-link img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 15px #5865f2);
     }
 
     .founders {
@@ -129,7 +145,6 @@
 <body>
   <div id="particles-js"></div>
 
-  <!-- شريط التنقل -->
   <nav>
     <a href="index.html">Home</a>
     <a href="tools.html">Tools</a>
@@ -140,7 +155,13 @@
   <header>
     <img src="https://www.raed.net/img?id=1398215" alt="Banner">
     <h1>Discord.gg/ss6 - Our Staff For SoS</h1>
-  </header>
+    <!-- شعار ديسكورد -->
+    <div class="discord-link">
+      <a href="https://discord.gg/ss6" target="_blank">
+        <img src="https://www.raed.net/img?id=1420303" alt="Join Discord">
+      </a>
+    </div>
+  </heeader>
 
   <!-- كروت الأشخاص -->
   <section class="founders">
@@ -238,5 +259,6 @@
   </script>
 </body>
 </html>
+
 
 
