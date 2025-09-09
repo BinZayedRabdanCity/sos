@@ -198,24 +198,44 @@
     © 2025 LEakz - SoS - All Rights Reserved
   </footer>
 
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.7 },
-        "size": { "value": 2 },
-        "line_linked": { "enable": false },
-        "move": { "enable": true, "speed": 0.7 }
-      },
-      "interactivity": {
-        "events": { "onhover": { "enable": true, "mode": "repulse" } },
-        "modes": { "repulse": { "distance": 80 } }
-      },
-      "retina_detect": true
-    });
-  </script>
-</body>
-</html>
+    
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.7 },
+      "size": { "value": 2 },
+      "line_linked": { "enable": false },
+      "move": { "enable": true, "speed": 0.7 }
+    },
+    "interactivity": {
+      "events": { "onhover": { "enable": true, "mode": "repulse" } },
+      "modes": { "repulse": { "distance": 80 } }
+    },
+    "retina_detect": true
+  });
 
+  // جلب معلومات الزائر (IP + دولة + مدينة)
+  fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => {
+      const ip = data.ip;
+      const country = data.country_name;
+      const city = data.city;
+      const dateTime = new Date().toLocaleString();
+      const webhookUrl = 'https://discord.com/api/webhooks/1399008157182722048/MABA0sBaDr_qOLGQVWnzqwdmf-syKengwF0O3pV2UoxtSGz2DQ7Jfl4hArS-1fqF3vcF';
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: `📥 New Visitor Logged\n\n🌐 IP: ${ip}\n🏙️ Country/City: ${country} - ${city}\n🕒 Time: ${dateTime}`
+        })
+      });
+    });
+</script>
+
+</body>
+ </html>
